@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Node JS - MySQL</title>
+</head>
+<body>
+    <h1>Daftar User/Pengguna</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Telepon</th>
+            <th>Aksi</th>
+        </tr>
+        <% User.forEach(user => {%>
+        <tr>
+            <td><%= pengguna.id %></td>
+            <td><%= pengguna.name %></td>
+            <td><%= pengguna.email %></td>
+            <td><%= pengguna.phone %></td>
+            <td>
+                <a href="/edit/<%= user.id %>">Edit</a> |
+                <a href="/delete/<%= user.id %>">Hapus</a>
+            </td>
+        </tr>
+    </table>
+    <% }) %>
+</body>
+</html>
